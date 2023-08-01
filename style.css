@@ -1,26 +1,39 @@
-body{
-    background-color: #666;
+body {
+    background-color: #e0dfdf;
     display: flex;
     width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    font-family: sans-serif;
 }
-.add-input{
-    color: beige;
+
+.add-input {
+    color: rgb(187, 187, 171);
     font-size: large;
-    margin-bottom:.5rem;
+    margin-bottom: .5rem;
     border: none;
-    padding:.2rem;
-    outline:none;
+    padding: .2rem;
+    outline: none;
     box-shadow: inset -3px -4px rgb(48, 132, 181)
 }
-.add-btn{
+
+.add-btn {
+    font-family: cursive;
     color: rgb(87, 70, 239);
     font-size: large;
-    margin-bottom:.5rem;
+    margin-bottom: .5rem;
     border: none;
-    padding:.2rem;
-    outline:none;
+    padding: .2rem;
+    outline: none;
     box-shadow: inset -3px -4px rgb(48, 132, 181)
+}
+
+.continer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
