@@ -19,6 +19,13 @@ addBtn.addEventListener("click", () => {
     doneBtn.textContent = "Done"
     removeBtn.addEventListener("click", () => {
         newLi.remove()
+    
+    })
+    doneBtn.addEventListener("click" , ()=>
+    {
+    
+        newSpan.style.textDecoration = "line-through"
+        
     })
 
 
