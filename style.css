@@ -9,7 +9,7 @@ body {
 }
 
 .add-input {
-    color: rgb(187, 187, 171);
+    color: rgb(0, 0, 0);
     font-size: large;
     margin-bottom: .5rem;
     border: none;
@@ -37,6 +37,15 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-h1{
+
+h1 {
     color: #0b0303;
+}
+
+ul {
+    border: 2px solid #0b0303;
+    border-radius: 5px;
+    height: 30px;
+    max-width: 500px;
+    width: 220px;
 }

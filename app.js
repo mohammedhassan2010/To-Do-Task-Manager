@@ -1,6 +1,7 @@
 const addInput = document.querySelector(".add-input")
 const addBtn = document.querySelector(".add-btn")
-const taskList = document.querySelector(".task-list")
+const uncompleteList = document.querySelector(".uncomplete-list")
+const completeList = document.querySelector(".complete-list")
 
 addBtn.addEventListener("click", () => {
     const newLi = document.createElement("li")
@@ -12,20 +13,19 @@ addBtn.addEventListener("click", () => {
     newLi.appendChild(removeBtn)
     newLi.appendChild(editBtn)
     newLi.appendChild(doneBtn)
-    taskList.appendChild(newLi)
+    uncompleteList.appendChild(newLi)
     newSpan.textContent = addInput.value
-    removeBtn.textContent = "Remove"
-    editBtn.textContent = "Edit"
-    doneBtn.textContent = "Done"
+    removeBtn.textContent = "🗑️"
+    editBtn.textContent = "✏️"
+    doneBtn.textContent = "✔️"
     removeBtn.addEventListener("click", () => {
         newLi.remove()
-    
+
     })
-    doneBtn.addEventListener("click" , ()=>
-    {
-    
+    doneBtn.addEventListener("click", () => {
         newSpan.style.textDecoration = "line-through"
-        
+        newLi.remove()
+        completeList.appendChild(newLi)
     })
 
 
