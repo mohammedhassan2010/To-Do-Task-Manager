@@ -18,6 +18,8 @@ addBtn.addEventListener("click", () => {
     removeBtn.textContent = "🗑️"
     editBtn.textContent = "✏️"
     doneBtn.textContent = "✔️"
+
+
     removeBtn.addEventListener("click", () => {
         newLi.remove()
 
