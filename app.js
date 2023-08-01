@@ -29,6 +29,28 @@ addBtn.addEventListener("click", () => {
         newLi.remove()
         completeList.appendChild(newLi)
     })
+    editBtn.addEventListener("click", (event) => {
+        const editInput = document.createElement("input")
+        const saveBtn = document.createElement("button")
+        newLi.appendChild(editInput)
+        newLi.appendChild(saveBtn)
+        saveBtn.textContent = "💾"
+        saveBtn.addEventListener("click", () => {
+            const editList = editInput.value;
+            const oldList = event.target.parentElement.firstChild;
+            oldList.textContent = editList
+            editInput.remove()
+            saveBtn.remove()
+        })
+
+
+
+    })
+
+
+
+
+
 
 
 
