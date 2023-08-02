@@ -4,6 +4,12 @@ const uncompleteList = document.querySelector(".uncomplete-list")
 const completeList = document.querySelector(".complete-list")
 
 addBtn.addEventListener("click", () => {
+    if (addInput.value.trim() == "") {
+        alert("this empty")
+        addInput.value = ""
+        return;
+    }
+
     const newLi = document.createElement("li")
     const newSpan = document.createElement("span")
     const removeBtn = document.createElement("button")
@@ -24,11 +30,14 @@ addBtn.addEventListener("click", () => {
         newLi.remove()
 
     })
-    doneBtn.addEventListener("click", () => {
-        newSpan.style.textDecoration = "line-through"
-        newLi.remove()
-        completeList.appendChild(newLi)
-    })
+    doneBtn.addEventListener("click", (event) => {
+        newSpan.style.textDecoration = "line-through";
+        newLi.remove();
+        completeList.appendChild(newLi);
+
+        event.target.remove();
+    });
+
     editBtn.addEventListener("click", (event) => {
         const editInput = document.createElement("input")
         const saveBtn = document.createElement("button")
