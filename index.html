@@ -10,19 +10,44 @@
 
 <body>
     <div class="continer">
-        <div class="add-div">
-            <input class="add-input" type="text" placeholder="Enter Your Task">
-            <button class="add-btn" type="submit">Add</button>
+        <div class="bgc-continer nav-continer">
+            <h1 class="title">To do list Manger</h1>
+            <div class="add-div">
+                <input class="add-input" type="text" placeholder="Enter Your Task">
+                <input type="url" class="add-img" placeholder="Enter URL image (optional)">
+                <input type="date" class="date">
+                <select id="select">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+                <button class="add-btn" type="submit">Add</button>
+            </div>
+
+
+
+            <div class="search-box">
+                <input type="search" class="search-input" onkeyup="searchFunc()" placeholder="Search">
+            </div>
+
+
+
         </div>
+        <div class="big-continer-bgc">
+            <div class="bgc-continer bgc">
+                <h1 class="title">Complete List</h1>
+                <ul class="complete-list">
 
-        <ul class="complete-list">
+                </ul>
+            </div>
 
-        </ul>
+            <div class="bgc-continer bgc">
+                <h1 class="title">Uncomplete List</h1>
+                <ul class="uncomplete-list">
 
-
-        <ul class="uncomplete-list">
-
-        </ul>
+                </ul>
+            </div>
+        </div>
 
     </div>
     <script src="./app.js"></script>
