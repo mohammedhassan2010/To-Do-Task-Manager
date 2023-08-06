@@ -107,34 +107,47 @@ addBtn.addEventListener("click", () => {
 
 
 function searchFunc() {
-    const input = document.querySelector(".search-input")
-    const filter = input.value.toLowerCase()
-    const resutls = document.getElementsByClassName("result")
+    const input = document.querySelector(".search-input");
+    const filter = input.value.toLowerCase();
+    const resutls = document.getElementsByClassName("result");
 
     for (let i = 0; i < resutls.length; i++) {
-        if (resutls[i].parentElement.innerText.toLowerCase().includes(filter)) {
-            resutls[i].parentElement.style.display = "flex"
+        const listItem = resutls[i].parentElement.parentElement;
+
+        if (resutls[i].textContent.toLowerCase().includes(filter)) {
+            listItem.style.display = "block";
+
+
+
         } else {
-            resutls[i].parentElement.style.display = "none"
+            listItem.style.display = "none";
+
         }
     }
-
 }
+
+
+
+
+
+
+
 const darkMode = document.getElementById('dark');
-const body = document.querySelector('body',);
+const body = document.querySelector('body', );
 
-darkMode.addEventListener('click', function(){
+darkMode.addEventListener('click', function() {
+
     this.classList.toggle('bi-moon');
-    if (this.classList.toggle('bi-brigthness-hight-fill')){
-    body.style.background = 'white';
-    body.style.color = 'black';
-    body.style.transition = '2s';
+    if (this.classList.toggle('bi-brigthness-hight-fill')) {
+        body.style.background = '#e0dfdf';
+        darkMode.style.color = 'black';
+        body.style.transition = '2s';
 
 
-    }else{
-    body.style.background = 'black';
-    body.style.color = 'white';
-    body.style.transition = '2s';
+    } else {
+        body.style.background = 'black';
+        darkMode.style.color = 'white';
+        body.style.transition = '2s';
 
     }
 
